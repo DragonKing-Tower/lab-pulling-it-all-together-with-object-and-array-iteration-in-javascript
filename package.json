@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json"
+    "test": "mocha --require @babel/register --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json"
   },
   "repository": {
     "type": "git",
@@ -28,17 +28,20 @@
   },
   "homepage": "https://github.com/learn-co-curriculum/lab-pulling-it-all-together-with-object-and-array-iteration-in-javascript#readme",
   "devDependencies": {
-    "babel-core": "6.26.3",
-    "babel-preset-env": "1.7.0",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/register": "^7.27.1",
     "chai": "4.1.2",
-    "file-system": "2.2.2",
-    "jsdom": "9.2.1",
-    "mocha": "5.2.0",
-    "mocha-jsdom": "~1.1.0",
-    "mocha-multi": "1.0.1",
-    "chai-spies-next": "^0.9.3"
+    "chai-spies-next": "^0.9.3",
+    "file-system": "^1.2.2",
+    "jsdom": "^22.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha-jsdom": "^1.2.0",
+    "mocha-multi": "1.0.1"
   },
   "dependencies": {
+    "eslint": "^9.26.0",
+    "mocha": "^11.2.2",
     "sinon": "^7.3.2"
   }
 }
